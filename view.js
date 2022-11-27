@@ -1,7 +1,7 @@
 import image from './assets/22.png'
 import {TextBlock, TitleBlock, ColumnsBlock, ImageBlock, VideoBlock} from './classes/blocks'
 
-export const model = [
+export const view = [
 
     new TitleBlock("Сайт-визитка", {
         tag: "h2",

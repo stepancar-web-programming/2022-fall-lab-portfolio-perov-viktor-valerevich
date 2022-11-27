@@ -1,20 +1,19 @@
 import {Site} from "./site";
-import {model} from "../model";
 import {Sidebar} from "./sidebar";
 import {counter} from "../utils";
 
 export class App {
-    constructor(model) {
-        this.model = model;
+    constructor(view) {
+        this.view = view;
     }
 
     init() {
         const site = new Site('#site')
-        site.render(model)
+        site.render(this.view)
 
         const updateCallback =  newBlock => {
-            model.push(newBlock)
-            site.render(model)
+            this.view.push(newBlock)
+            site.render(this.view)
         }
 
         new Sidebar('#panel', updateCallback)

@@ -1,5 +1,5 @@
-import {model} from './model'
+import {view} from './view'
 import './styles/main.css'
 import {App} from "./classes/app";
 
-new App(model).init();
+new App(view).init();

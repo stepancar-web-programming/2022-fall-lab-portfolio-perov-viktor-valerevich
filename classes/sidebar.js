@@ -5,12 +5,10 @@ export class Sidebar {
         this.$el = document.querySelector(selector);
         this.update = updateCallback
         this.init()
-        // slideTog(".card-body-modify", "card-text-modify")
     }
 
     init() {
         this.$el.insertAdjacentHTML('afterbegin', this.template)
-        // this.$el.addEventListener('dropdown', this.add.bind(this))
     }
 
 
@@ -34,9 +32,7 @@ export function slideTog(parentSelector) {
     blocks.forEach(block => {
         block.addEventListener('click', function () {
             this.classList.toggle('active')
-            console.log(block)
             let content = this.nextElementSibling
-            console.log(content)
         })
     })
 }
